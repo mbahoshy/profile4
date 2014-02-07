@@ -94,3 +94,16 @@ body {
 	float:left;
 	clear:both;
 }
+
+.header-img {
+
+}
+
+.wrapper img {
+	overflow-x:hidden;
+
+}
+
+.anchor-top {
+margin-top:25px !important;
+}
