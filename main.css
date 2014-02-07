@@ -27,10 +27,11 @@ body {
 }
 
 .wrapper h2 {
-	width:90%;
+	width: 90%;
 	background-color: rgba(255, 255, 0, 0.6);
-	margin: 100px auto 20px auto;
+	margin: 0 5% 20px 5%;
 	padding: 10px;
+	float: left;
 	font-size: 23px;
 }
 
@@ -66,7 +67,7 @@ body {
 
 .mid {
 	position:relative;
-	margin-top: 100px;
+	padding-top: 100px;
 }
 
 .third {
@@ -84,5 +85,12 @@ body {
 }
 
 .clear {
+	clear:both;
+}
+
+.anchor {
+	height:100px;
+	width:100%;
+	float:left;
 	clear:both;
 }
