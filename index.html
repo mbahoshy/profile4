@@ -2,6 +2,20 @@
 <head>
 	<link rel='stylesheet' href='main.css'	/>
 	<script src='scripts.js'></script>
+	<script src="jquery.js"></script>
+	<script type='text/javascript'>
+		$(window).on('resize', function () {
+			var width = $(window).width();
+			if (width < 700) {
+				$('.third, .two-third').addClass('full-width');
+			}
+
+			if (width >= 700) {
+				$('.full-width').removeClass('full-width');
+			}
+			console.log(width);
+		});
+	</script>
 </head>
 <body>
 
@@ -20,18 +34,39 @@
 <div class='wrapper'>
 	
 	<a name='about_me'><img src='header.jpg'/></a><h2 class='anchor-top' >about me</h2>
-	<div class='third'>My name is Matthew Ross, and I am seeking employment in web development. After graduating from the University of Washington, I spent a year working at a start up company, Priveazy. For the past year and a half, I have been living in Wenatchee, working at my parent's business installing and servicing HVAC equipment. During this time I have worked on several web projects that employ a variety of web development technologies.</div>
+	<div class='third'>
+		<p>My name is Matthew Ross, and I am seeking employment in web development. After graduating from the <b>University of Washington</b>, I spent a year working at a start up company, Priveazy.</p>
+		<p>For the past year and a half, I have been living in Wenatchee, working at my parent's business installing and servicing HVAC equipment. During this time I have worked on several web projects that employ a variety of web development technologies.</p>
+		<p>I recently completed the <b>Code Fellows Javascript Boot Camp</b>, and now develop full stack Javascript web applications.</p>
+	</div>
 	<div class='two-third'><b>Skills</b><p>HTML/CSS - Javascript - jQuery - nodeJS - backboneJS - kineticJS - PHP - Adobe Creative Suite - Content Development - UX - mongoDB - mySQL - product development</p><b>Links</b><p><a target='_' href='https://github.com/mbahoshy'>Github Profile</a></p><p><a href=''>Linkedin Profile</a></p><p><a href=''>Ground Up (blog)</a></p></div>
 	<div class='clear'></div>
 
 	<a class='anchor' name='portfolio'></a><h2>portfolio</h2>
-	<div class='third'>My name is Matthew Ross, and I am seeking employment in web development. After graduating from the University of Washington, I spent a year working at a start up company, Priveazy. For the past year and a half, I have been living in Wenatchee, working at my parent's business installing and servicing HVAC equipment. During this time I have worked on several web projects that employ a variety of web development technologies.</div>
-	<div class='two-third'><b>Skills</b><p>HTML/CSS - Javascript - jQuery - nodeJS - backboneJS - kineticJS - PHP - Adobe Creative Suite - Content Development - UX - mongoDB - mySQL - product development</p><b>Links</b><p><a target='_' href='https://github.com/mbahoshy'>Github Profile</a></p><p><a href=''>Linkedin Profile</a></p><p><a href=''>Ground Up (blog)</a></p></div>
+	<div class='whole'>
+		<h3>TradePro</h3>
+		<p><b>Technologies used</b></p>
+		<p>backboneJS - nodeJS - mongoDB - kineticJS - underscore - jQuery</p>
+		<iframe width="854" height="510" src="//www.youtube.com/embed/1ipcW0JIN7g" frameborder="0" allowfullscreen></iframe>
+	</div>
 	<div class='clear'></div>
 
 	<a class='anchor' name='resume'></a><h2>resume</h2>
-	<div class='third'>My name is Matthew Ross, and I am seeking employment in web development. After graduating from the University of Washington, I spent a year working at a start up company, Priveazy. For the past year and a half, I have been living in Wenatchee, working at my parent's business installing and servicing HVAC equipment. During this time I have worked on several web projects that employ a variety of web development technologies.</div>
-	<div class='two-third'><b>Skills</b><p>HTML/CSS - Javascript - jQuery - nodeJS - backboneJS - kineticJS - PHP - Adobe Creative Suite - Content Development - UX - mongoDB - mySQL - product development</p><b>Links</b><p><a target='_' href='https://github.com/mbahoshy'>Github Profile</a></p><p><a href=''>Linkedin Profile</a></p><p><a href=''>Ground Up (blog)</a></p></div>
+	<div class='third'>
+		<h4>Education</h4>
+		<p>Code Fellows Javascript Boot Camp <i>2013</i></p>
+		<p>Ultimate Technician Academy <i>2013</i></p>
+		<p>University of Washington <i>2007 - 2011</i></p>
+	</div>
+	<div class='third'>
+		<h4>Employment History</h4>
+		<p>Alpine Aire Heating &amp; Cooling Inc - Webmaster, Service Technician, Installer <i>June 2012 - Oct 2013</i></p>
+		<p>Priveazy - Lead Content Engineer <i>June 2011 - June 2012</i></p>
+		<p>UW Surplus Store - Student Worker <i>Nov 2008 - June 2011</i></p>
+	</div>
+	<div class='third'>
+		<p><h4><a href=''>Download Resume</a></h4></p>
+	</div>
 </div>
 </div>
 </body>

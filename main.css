@@ -24,6 +24,7 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
+	line-height: 1.5em;
 }
 
 .wrapper h2 {
@@ -71,16 +72,16 @@ body {
 }
 
 .third {
-	max-width:260px;
-	padding:30px;
+	width:23.33%;
+	padding:30px 5% 30px 5%;
 	float:left;
 	text-align: center;
 	/*background-color: red;*/
 }
 
 .two-third {
-	width:580px;
-	padding:30px;
+	width:56.66%;
+	padding:30px 5% 30px 5%;
 	float:left;
 }
 
@@ -99,11 +100,25 @@ body {
 
 }
 
-.wrapper img {
-	overflow-x:hidden;
+.whole {
+	width:95%;
+	padding:30px 2.5% 30px 2.5%;
+	float:left;
+}
 
+body {
+	overflow-x:hidden;
 }
 
 .anchor-top {
 margin-top:25px !important;
+}
+
+.wrapper p {
+	padding:0;
+	margin-top:0;
+}
+
+.full-width {
+	width:90% !important;
 }
