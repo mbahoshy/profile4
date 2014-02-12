@@ -122,3 +122,15 @@ margin-top:25px !important;
 .full-width {
 	width:90% !important;
 }
+
+.wrapper ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center; 
+}
+
+.wrapper li {
+	padding:5px 0;
+	font-style: italic;
+}
