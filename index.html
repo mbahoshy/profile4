@@ -8,33 +8,67 @@
 			var width = $(window).width();
 			if (width < 700) {
 				$('.third, .two-third').addClass('full-width');
+				$('#menu').removeClass('hidden');
+				$('#nav').addClass('hidden');
+				$('#nav').addClass('short');
+				$('.short').on('click.short', 'a', function() {
+					$('#nav').toggleClass('hidden');
+				});
 			}
 
 			if (width >= 700) {
 				$('.full-width').removeClass('full-width');
+				$('#menu').addClass('hidden');
+				$('#nav').removeClass('hidden');
+				$('.short').off('click.short');
+				$('#nav').removeClass('short');
 			}
 			console.log(width);
 		});
+
+		$(document).ready( function() {
+			$('#nav').on('click', 'a', function (e) {
+				// var id = this.getId();
+				e.preventDefault();
+
+				var id = $(this).data('nav');
+				var y = $('#' + id).offset();
+				var z = y.top - 120;
+
+				$(document).scrollTop(z);
+			});
+			$('#menu').on('click', function () {
+				$('#nav').toggleClass('hidden');
+			});
+
+
+			$(window).trigger('resize');
+		});
+
 	</script>
 </head>
 <body>
 
 <div class='header'>
 	<div class='wrapper'>
-		<h1>Matthew Ross</h1><span>Full stack Javascript developer</span>
+		<img class='hidden' id='menu' src='menu.png'/>
 		<ul id='nav'>
-			<a href='#about_me'><li>about me</li></a>
-			<a href='#portfolio'><li>portfolio</li></a>
-			<a href='#resume'><li>resume</li></a>
+			<a data-nav='about_me'><li>about me</li></a>
+			<a data-nav='portfolio'><li>portfolio</li></a>
+			<a data-nav='resume'><li>resume</li></a>
 		</ul>
+		<h1>Matthew Ross</h1><span>Full stack Javascript developer</span>
+		
+	
 	</div>
 </div>
 
 <div class='mid'>
-<div class='wrapper'>
+<div class='wrapper shadow'>
 	
-	<a name='about_me'><img src='header.jpg'/></a><h2 class='anchor-top' >about me</h2>
-	<div class='third'><b>Skills</b>
+	<img src='header.jpg'/><h2 id='about_me' class='anchor-top' >about me</h2>
+	<div class='third'>
+		<label>SKILLS:</label>
 		<ul>
 			<li>HTML/CSS</li>
 			<li>Javascript</li>
@@ -51,28 +85,29 @@
 		</ul>
 	</div>
 	<div class='two-third'>
-		<p>My name is Matthew Ross, and I am seeking employment in web development. After graduating from the <b>University of Washington</b>, I spent a year working at a start up company, Priveazy.</p>
+		<p>My name is Matthew Ross, and you have arrived at my web portfolio. After graduating from the <b>University of Washington</b>, I spent a year working at a start up company, Priveazy.</p>
 		<p>For the past year and a half, I have been living in Wenatchee, working at my parent's business installing and servicing HVAC equipment. During this time I have worked on several web projects that employ a variety of web development technologies.</p>
 		<p>I recently completed the <b>Code Fellows Javascript Boot Camp</b>, and now develop full stack Javascript web applications.</p>
-		<b>Links</b><p><a target='_' href='https://github.com/mbahoshy'>Github Profile</a></p><p><a href=''>Linkedin Profile</a></p><p><a href=''>Ground Up (blog)</a></p>
+		<label>LINKS:</label><p><a target='_' href='https://github.com/mbahoshy'>Github Profile</a></p><p><a href=''>Linkedin Profile</a></p><p><a href=''>Ground Up (blog)</a></p>
 	</div>
 	
 	<div class='clear'></div>
 
 	<!-- TRADEPRO -->
 
-	<a class='anchor' name='portfolio'></a><h2>portfolio</h2>
+	<h2 id='portfolio'>portfolio</h2>
 	<div class='whole'>
 		<h3>TradePro</h3>
+		<p><a href='http://tradepro.herokuapp.com/' target='_blank'>tradepro.herokuapp.com</a></p>
 	</div>
 	<div class='two-third'>
 		
 							
 			<p><label>DESCRIPTION:</label> At its heart, the concept of TradePro is simple- it replicates electrical circuits in the web browser. The purpose of this application is to train HVAC (heating and cooling) technicians to identify and diagnose electrical failures.</p>
-			<p>The website offers video lessons, troubleshooting probems, and tests to train users. User statistics are gathered and used to give personal progress reports. TradePro tracks metrics that allow us to identify individual strengths and weaknesses of a user based on furnace type, part type (eg transformer, relay, etc), and more.</p>
+			<p>The website offers video lessons, troubleshooting problems, and tests to train users. User statistics are gathered and used to give personal progress reports. TradePro tracks metrics that allow us to identify individual strengths and weaknesses of a user based on furnace type, part type (eg transformer, relay, etc), and more.</p>
 	</div>
 	<div class='third'>
-			<p><label>TECHNOLOGIES: </label>
+			<label>TECHNOLOGIES: </label>
 				<ul>
 					<li>backboneJS</li>
 					<li>nodeJS</li>
@@ -81,12 +116,9 @@
 					<li>underscore</li>
 					<li>jQuery</li>
 				</ul>
-			</p>
+			
 	</div>
-	<div class='clear'></div>
-	<div class='whole'>
-		<iframe width="854" height="510" src="//www.youtube.com/embed/1ipcW0JIN7g" frameborder="0" allowfullscreen></iframe>
-	</div>
+	<img src='tradepro.png' class='project-img' />
 	<div class='clear'></div>
 
 
@@ -94,6 +126,7 @@
 
 	<div class='whole'>
 		<h3>AlpineAire.net</h3>
+		<p><a href='http://www.alpineaire.net/' target='_blank'>alpineaire.net</a></p>
 	</div>
 	<div class='two-third'>
 		
@@ -103,16 +136,17 @@
 			<p>A mobile version of the website is also available.</p>
 	</div>
 	<div class='third'>
-			<p><label>TECHNOLOGIES: </label>
+			<label>TECHNOLOGIES: </label>
 				<ul>
-					<li>HTML/CSS</li>
-					<li>PHP</li>
-					<li>Javascript</li>
+					<li>html/css</li>
+					<li>php</li>
+					<li>javascript</li>
 					<li>SEO</li>
 					<li>jQuery</li>
 				</ul>
-			</p>
+			
 	</div>
+	<img src='alpineaire.png' class='project-img' />
 	<div class='clear'></div>
 
 	<!-- THE DATABASE PROJECT -->
@@ -123,40 +157,49 @@
 	<div class='two-third'>
 		
 							
-			<p><label>DESCRIPTION:</label> The Alpine Aire website was developed to reach the largest audience possible. Usability and design had to be accessible to the lowest common denominator. The result is a simple, modern, and beautiful website to represent the company.</p>
-			<p>The primary focus of this website was to drive phone calls and online appointments through SEO. A successful SEO campaign was designed and deployed, specifically tailored for the locale and industry.</p>
-			<p>A mobile version of the website is also available.</p>
+			<p><label>DESCRIPTION:</label> This project is a PHP web application designed for HVAC (heating and cooling) small businesses. It was developed to keep track of customers, equipment, inventory, jobs, service appointments, and service tickets. This project was eventually abandoned, however, it remains interesting to me because the application provides a simple and intuitive interface for tracking and updating company information.</p>
+			<p>The video below is a screen capture of the application in action.</p>
+
 	</div>
 	<div class='third'>
-			<p><label>TECHNOLOGIES: </label>
+			<label>TECHNOLOGIES: </label>
 				<ul>
-					<li>HTML/CSS</li>
-					<li>PHP</li>
-					<li>Javascript</li>
-					<li>SEO</li>
-					<li>jQuery</li>
+					<li>html/css</li>
+					<li>php</li>
+					<li>mySQL</li>
 				</ul>
-			</p>
+			
+	</div>
+
+	<div class='whole'>
+		<!-- <iframe width="640" height="390" src="//www.youtube.com/embed/4ouncggya6Y" frameborder="0" allowfullscreen></iframe> -->
 	</div>
 	<div class='clear'></div>
 
 
-	<a class='anchor' name='resume'></a><h2>resume</h2>
-	<div class='third'>
+
+	<!-- RESUME -->
+	<h2 id='resume'>resume</h2>
+	<div class='third center'>
 		<h4>Education</h4>
 		<p>Code Fellows Javascript Boot Camp <i>2013</i></p>
 		<p>Ultimate Technician Academy <i>2013</i></p>
 		<p>University of Washington <i>2007 - 2011</i></p>
 	</div>
-	<div class='third'>
+	<div class='third center'>
 		<h4>Employment History</h4>
 		<p>Alpine Aire Heating &amp; Cooling Inc - Webmaster, Service Technician, Installer <i>June 2012 - Oct 2013</i></p>
 		<p>Priveazy - Lead Content Engineer <i>June 2011 - June 2012</i></p>
 		<p>UW Surplus Store - Student Worker <i>Nov 2008 - June 2011</i></p>
 	</div>
-	<div class='third'>
+	<div class='third center'>
 		<p><h4><a href=''>Download Resume</a></h4></p>
 	</div>
+	<div class='clear'></div>
+</div>
+<div class='footer'>
+
+
 </div>
 </div>
 </body>
