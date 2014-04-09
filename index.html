@@ -2,55 +2,14 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel='stylesheet' href='main.css'	/>
-	<script src='scripts.js'></script>
+
 	<script src="jquery.js"></script>
-	<script type='text/javascript'>
-		$(window).on('resize', function () {
-			var width = $(window).width();
-			if (width < 700) {
-				$('.third, .two-third').addClass('full-width');
-				$('#menu').removeClass('hidden');
-				$('#nav').addClass('hidden');
-				$('#nav').addClass('short');
-				$('.short').on('click.short', 'a', function() {
-					$('#nav').toggleClass('hidden');
-				});
-			}
+	<script src='scripts.js'></script>
 
-			if (width >= 700) {
-				$('.full-width').removeClass('full-width');
-				$('#menu').addClass('hidden');
-				$('#nav').removeClass('hidden');
-				$('.short').off('click.short');
-				$('#nav').removeClass('short');
-			}
-			console.log(width);
-		});
-
-		$(document).ready( function() {
-			$('#nav').on('click', 'a', function (e) {
-				// var id = this.getId();
-				e.preventDefault();
-
-				var id = $(this).data('nav');
-				var y = $('#' + id).offset();
-				var z = y.top - 120;
-
-				$(document).scrollTop(z);
-			});
-			$('#menu').on('click', function () {
-				$('#nav').toggleClass('hidden');
-			});
-
-
-			$(window).trigger('resize');
-		});
-
-	</script>
 </head>
 <body>
 
-<div class='header'>
+<header>
 	<div class='wrapper'>
 		<img class='hidden' id='menu' src='imgs/menu.png'/>
 		<ul id='nav'>
@@ -62,37 +21,65 @@
 		
 	
 	</div>
-</div>
+</header>
 
-<div class='mid'>
-<div class='wrapper shadow'>
-	
-	<img src='imgs/header.jpg'/><h2 id='about_me' class='anchor-top' >about me</h2>
-	<div class='third'>
+<div id='page' class='wrapper shadow'>
+	<div id='header_img'>
+		<!-- <img id= 'header_img' src='imgs/purplegirl.jpg'/> -->
+	</div>
+		<div id='links_container'>
+			<a target='_blank' href='https://github.com/mbahoshy'>
+				<img class='icon' src='imgs/github2.png' />
+				<p class=''>(github)</p>
+			</a>
+			<a target='_blank' href='https://www.linkedin.com/in/mbahoshy'>
+				<img class='icon' src='imgs/linkedin.png' />
+				<p class=''>(linkedin)</p>
+			</a>
+			<a target='_blank' href='http://mbahoshy.wordpress.com/'>
+				<img class='icon' src='imgs/wordpress.png' />
+				<p class=''>(blog)</p>
+			</a>
+		</div>
+	<h2 id='about_me'>about me</h2>
+	<div id='skills_container'>
 		<label>SKILLS:</label>
 		<ul>
 			<li>HTML/CSS</li>
 			<li>Javascript</li>
 			<li>jQuery</li>
-			<li>nodeJS</li>
+		</ul>
+		<ul>
 			<li>backboneJS</li>
-			<li>kineticJS</li>
+			<li>nodeJS</li>
+			<li>mongoDB</li>
+		</ul>
+
+		<ul>
+			<li>grunt</li>
 			<li>PHP</li>
+			<li>kineticJS</li>
+
+		</ul>
+		<ul>
 			<li>Adobe Creative Suite</li>
 			<li>Content Development</li>
 			<li>UX</li>
-			<li>mongoDB</li>
 			<li>mySQL</li>
+
 		</ul>
 	</div>
+	<div class='clear'></div>
 	<div class='two-third'>
+
 		<p>My name is Matthew Ross, and welcome my web portfolio. After graduating from the <b>University of Washington</b>, I spent a year working at a start up company, Priveazy.</p>
 		<p>For the past year and a half, I have been living in Wenatchee, working at my family business installing and servicing HVAC equipment. During this time I worked on several web projects that employ a variety of web development technologies.</p>
 		<p>I recently completed the <b>Code Fellows Javascript Boot Camp</b>, and now develop full stack Javascript web applications.</p>
-		<label>LINKS:</label><p><a target='_blank' href='https://github.com/mbahoshy'>Github Profile</a></p><p><a target='_blank' href='https://www.linkedin.com/in/mbahoshy'>Linkedin Profile</a></p><p><a target='_blank' href='http://mbahoshy.wordpress.com/'>Ground Up (blog)</a></p>
+		
 	</div>
 	
 	<div class='clear'></div>
+
 
 	<!-- TRADEPRO -->
 
@@ -204,6 +191,6 @@
 
 
 </div>
-</div>
+
 </body>
 </html>

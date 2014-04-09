@@ -7,7 +7,7 @@ body {
 	overflow-x:hidden;
 }
 
-.header {
+header {
 	border-bottom: 1px solid #CCCCCC;
 	width: 100%;
 	margin:0;
@@ -21,9 +21,85 @@ body {
 	box-shadow: 0px 2px 10px #D8ADFF;
 }
 
-.header a:visited {
+header a:visited {
 	text-decoration: none;
 	color:blue;
+}
+
+header span {
+	position:absolute;
+	padding:15px 2.5%;
+	top:40px;
+}
+
+
+header h1 {
+	position:absolute;
+	margin:0;
+	padding:15px 2.5%;
+	font-family: 'bodoni';
+}
+
+#header_img {
+	width:100%;
+	height:200px;
+	float:left;
+	background-image: url('imgs/purplegirl2.jpg');
+	background-position:center; 
+}
+
+#links_container {
+	float:left;
+	width:64%;
+	margin:0 18%;
+	clear:both;
+	padding:30px 0;
+}
+
+#links_container a {
+	float:left;
+	width:33%;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 50px;
+	color:black;
+}
+
+#links_container a:visited {
+	color: black;
+}
+
+#links_container a:hover {
+	background-color:  rgba(235, 255, 0, 0.17);
+}
+
+#links_container a > p {
+	padding:0 0 0 0;
+	margin:0;
+	font-size: 13px;
+	font-family: 'futura';
+}
+
+#skills_container {
+	width:80%;
+	margin: 20px 10%;
+	float:left;
+	clear:both;
+}
+
+#skills_container ul {
+	width:25%;
+	float:left;
+}
+
+#skills_container li {
+	padding:15px 0;
+}
+
+#skills_container label {
+	width:100%;
+	float: left;
+	clear: both;
 }
 
 .wrapper {
@@ -38,12 +114,13 @@ body {
 
 .wrapper h2 {
 	width: 86%;
-	background-color: rgba(255, 255, 0, 0.6);
-	margin: 0 5% 20px 5%;
-	padding: 10px 2%;
+	background-color: rgba(131, 131, 131, 0.6);
+	margin: 0 0% 20px 10%;
+	padding: 60px 0 15px 4%;
+	/*height:100px;*/
 	float: left;
-	font-size: 23px;
-	text-align: center;
+	font-size: 32;
+	/*text-align: center;*/
 }
 
 .wrapper h3 {
@@ -53,19 +130,19 @@ body {
 	margin: 0;
 }
 
-.wrapper h1 {
-	position:absolute;
-	margin:0;
-	padding:15px 2.5%;
-	font-family: 'bodoni';
+#about_me {
+	background-image: url('imgs/about_me_ing.jpg');
+	background-position:center; 
+	color:white;
+	/*opacity: .75;*/
+	/*height:100px;*/
 }
 
 
-.wrapper span {
-	position:absolute;
-	padding:15px 2.5%;
-	top:40px;
-}
+
+
+
+/* nav styling */
 
 #nav {
 	position:absolute;
@@ -84,12 +161,28 @@ body {
 	border-radius: 5px;
 	margin: 0 10px;
 	color: rgb(0, 0, 153);
-	box-shadow: 1px 2px 2px #CCCCCC;
+	box-shadow: 1px 2px 2px #D8ADFF;
 }
 
 #nav li:hover {
 	background-color: #CCCCCC;
 }
+
+
+.icon {
+	width:48px;
+	margin:10px;
+}
+
+
+#page {
+	position:relative;
+	padding-top: 100px;
+	box-shadow: -3px 3px 3px #D8ADFF;
+	overflow-x:hidden;
+}
+
+
 
 
 .short {
@@ -110,18 +203,6 @@ body {
 	border-radius: 0 !important;
 }
 
-.fleft {
-	float: left;
-}
-
-.fright {
-	float: right;
-}
-
-.mid {
-	position:relative;
-	padding-top: 100px;
-}
 
 .third {
 	width:23.33%;
@@ -145,10 +226,6 @@ body {
 	width:100%;
 	float:left;
 	clear:both;
-}
-
-.header-img {
-
 }
 
 .whole {
@@ -196,8 +273,7 @@ body {
 }
 
 .shadow {
-	box-shadow: 3px 3px 3px #CCCCCC;
-	overflow-x:hidden;
+
 }
 
 .footer {
@@ -241,4 +317,22 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+@media screen and (max-width: 720px) {
+	#header_img {
+		background-size: 720px 180px;
+		height:180px;
+	}
+}
+
+
+/* utility classes */
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
 }
