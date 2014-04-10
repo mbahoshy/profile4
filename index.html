@@ -17,7 +17,7 @@
 			<a data-nav='portfolio'><li>portfolio</li></a>
 			<a data-nav='resume'><li>resume</li></a>
 		</ul>
-		<h1>Matthew Ross</h1><span>Full stack Javascript developer</span>
+		<h1>Matthew Ross</h1><span>Javascript developer</span>
 		
 	
 	</div>
@@ -27,23 +27,22 @@
 	<div id='header_img'>
 		<!-- <img id= 'header_img' src='imgs/purplegirl.jpg'/> -->
 	</div>
-		<div id='links_container'>
-			<a target='_blank' href='https://github.com/mbahoshy'>
-				<img class='icon' src='imgs/github2.png' />
-				<p class=''>(github)</p>
-			</a>
-			<a target='_blank' href='https://www.linkedin.com/in/mbahoshy'>
-				<img class='icon' src='imgs/linkedin.png' />
-				<p class=''>(linkedin)</p>
-			</a>
-			<a target='_blank' href='http://mbahoshy.wordpress.com/'>
-				<img class='icon' src='imgs/wordpress.png' />
-				<p class=''>(blog)</p>
-			</a>
-		</div>
-	<h2 id='about_me'>about me</h2>
+	<div id='links_container'>
+		<a target='_blank' href='https://github.com/mbahoshy'>
+			<img class='icon' src='imgs/github2.png' />
+			<p class=''>(github)</p>
+		</a>
+		<a target='_blank' href='https://www.linkedin.com/in/mbahoshy'>
+			<img class='icon' src='imgs/linkedin.png' />
+			<p class=''>(linkedin)</p>
+		</a>
+		<a target='_blank' href='http://mbahoshy.wordpress.com/'>
+			<img class='icon' src='imgs/wordpress.png' />
+			<p class=''>(blog)</p>
+		</a>
+	</div>
+	<!-- <label class='topic-label'>SKILLS:</label>	 -->
 	<div id='skills_container'>
-		<label>SKILLS:</label>
 		<ul>
 			<li>HTML/CSS</li>
 			<li>Javascript</li>
@@ -70,12 +69,14 @@
 		</ul>
 	</div>
 	<div class='clear'></div>
-	<div class='two-third'>
+	<h2 id='about_me'>about me</h2>
 
-		<p>My name is Matthew Ross, and welcome my web portfolio. After graduating from the <b>University of Washington</b>, I spent a year working at a start up company, Priveazy.</p>
-		<p>For the past year and a half, I have been living in Wenatchee, working at my family business installing and servicing HVAC equipment. During this time I worked on several web projects that employ a variety of web development technologies.</p>
-		<p>I recently completed the <b>Code Fellows Javascript Boot Camp</b>, and now develop full stack Javascript web applications.</p>
-		
+	<div class='text-container'>
+
+		<p>Hello and welcome my web portfolio. After graduating from the <b>University of Washington</b>, I spent a year working at a start up company, Priveazy, where I designed UI elements, created animated videos, and worked closely with html and css.</p>
+		<p>After leaving Priveazy, I spent some time working as an HVAC (heating and cooling) technician. During this time I developed concepts that would become a major focus of my coding passions. I am now developing applications that have real-world value in the industry.</p>
+		<p>Recently I completed the <b>Code Fellows Javascript Boot Camp</b>, and develop full stack Javascript web applications.</p>
+		<p></p>
 	</div>
 	
 	<div class='clear'></div>
@@ -84,21 +85,23 @@
 	<!-- TRADEPRO -->
 
 	<h2 id='portfolio'>portfolio</h2>
-	<div class='whole'>
-		<h3>TradePro</h3>
-		<p><a href='http://tradepro.herokuapp.com/' target='_blank'>tradepro.herokuapp.com</a></p>
+	<div class='text-container'>
+		<p><h3>TradePro</h3><a href='http://tradepro.herokuapp.com/' target='_blank'>tradepro.herokuapp.com</a></p>
 	</div>
-	<div class='two-third'>
-		
+	<div class='text-container'>
+			
+			
 							
-			<p><label>DESCRIPTION:</label> At its heart, the concept of TradePro is simple- it replicates electrical circuits in the web browser. The purpose of this application is to train HVAC (heating and cooling) technicians to identify and diagnose electrical failures.</p>
-			<p>The website offers video lessons, troubleshooting problems, and tests to train users. User statistics are gathered and used to give personal progress reports. TradePro tracks metrics that allow us to identify individual strengths and weaknesses of a user based on furnace type, part type (eg transformer, relay, etc), and more.</p>
+			<p><label>DESCRIPTION:</label> The purpose of this application is to train HVAC (heating and cooling) technicians to identify and diagnose electrical failures. Electrical circuits are exactly simulated in the web browser and "problems" are programmed into the circuit that the user must solve.</p>
+			<p>This application tracks metrics that allow me to identify individual strengths and weaknesses of a user based on furnace type or part type (eg transformer, relay ...)</p>
+			<p>I built this application using a node server that communicates with a backbone router to render views. A navigational architecture was built to allow users to select a class, choose a topic, and view available video lessons, problems, and tests. User data and metrics are saved to a monogo database.</p>
 	</div>
 	<div class='third'>
 			<label>TECHNOLOGIES: </label>
 				<ul>
 					<li>backboneJS</li>
 					<li>nodeJS</li>
+					<li>passportJS</li>
 					<li>mongoDB</li>
 					<li>kineticJS</li>
 					<li>underscore</li>

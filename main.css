@@ -7,6 +7,8 @@ body {
 	overflow-x:hidden;
 }
 
+/* header styling */
+
 header {
 	border-bottom: 1px solid #CCCCCC;
 	width: 100%;
@@ -48,59 +50,7 @@ header h1 {
 	background-position:center; 
 }
 
-#links_container {
-	float:left;
-	width:64%;
-	margin:0 18%;
-	clear:both;
-	padding:30px 0;
-}
-
-#links_container a {
-	float:left;
-	width:33%;
-	text-decoration: none;
-	text-align: center;
-	border-radius: 50px;
-	color:black;
-}
-
-#links_container a:visited {
-	color: black;
-}
-
-#links_container a:hover {
-	background-color:  rgba(235, 255, 0, 0.17);
-}
-
-#links_container a > p {
-	padding:0 0 0 0;
-	margin:0;
-	font-size: 13px;
-	font-family: 'futura';
-}
-
-#skills_container {
-	width:80%;
-	margin: 20px 10%;
-	float:left;
-	clear:both;
-}
-
-#skills_container ul {
-	width:25%;
-	float:left;
-}
-
-#skills_container li {
-	padding:15px 0;
-}
-
-#skills_container label {
-	width:100%;
-	float: left;
-	clear: both;
-}
+/* wrapper styling */
 
 .wrapper {
 	max-width: 960px;
@@ -137,10 +87,6 @@ header h1 {
 	/*opacity: .75;*/
 	/*height:100px;*/
 }
-
-
-
-
 
 /* nav styling */
 
@@ -183,6 +129,83 @@ header h1 {
 }
 
 
+
+#links_container {
+	float:left;
+	width:64%;
+	margin:0 18%;
+	clear:both;
+	padding:30px 0;
+}
+
+#links_container a {
+	float:left;
+	width:33%;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 50px;
+	color:black;
+}
+
+#links_container a:visited {
+	color: black;
+}
+
+#links_container a:hover {
+	background-color:  rgba(235, 255, 0, 0.17);
+}
+
+#links_container a > p {
+	padding:0 0 0 0;
+	margin:0;
+	font-size: 13px;
+	font-family: 'futura';
+}
+
+#skills_container {
+	width: 80%;
+	padding: 20px 10%;
+	background-color: #FFD2D2;
+	float: left;
+	clear: both;
+	font-weight: bold;
+	margin: 40px 0;
+}
+
+#skills_container ul {
+	width:25%;
+	float:left;
+}
+
+#skills_container li {
+	padding:15px 0;
+}
+
+#skills_container label {
+	width:100%;
+	float: left;
+	clear: both;
+}
+
+.text-container {
+	width:66%;
+	margin:20px 24% 20px 10%;
+	float:left;
+}
+
+.half p {
+
+}
+
+/*
+.topic-label {
+	padding:15px 10px;
+	color:white;
+	border-radius: 8px;
+	background-color: #D8ADFF;
+	margin-left:10%;
+}
+*/
 
 
 .short {
@@ -228,7 +251,7 @@ header h1 {
 	clear:both;
 }
 
-.whole {
+/*.whole {
 	width:90%;
 	padding:30px 5% 0 5%;
 	float:left;
@@ -237,7 +260,7 @@ header h1 {
 .whole p {
 	margin-top: 20px !important;
 }
-
+*/
 
 .anchor-top {
 	margin-top:25px !important;
