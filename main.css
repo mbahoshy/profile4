@@ -102,12 +102,13 @@ header h1 {
 #nav li {
 	display: inline;
 	padding: 10px 20px;
-	background-color: white;
-	border: 1px solid #CCCCCC;
-	border-radius: 5px;
+	/*background-color: white;*/
+	/* border: 1px solid #CCCCCC; */
+	border-radius: 0 0px 5px 0;
 	margin: 0 10px;
 	color: rgb(0, 0, 153);
-	box-shadow: 1px 2px 2px #D8ADFF;
+	box-shadow: 2px 2px 2px #D8ADFF;
+	background-color: rgba(216, 173, 255, 0.22);
 }
 
 #nav li:hover {
@@ -165,7 +166,7 @@ header h1 {
 #skills_container {
 	width: 80%;
 	padding: 20px 10%;
-	background-color: #FFD2D2;
+	/*background-color: #FFD2D2;*/
 	float: left;
 	clear: both;
 	font-weight: bold;
@@ -173,8 +174,14 @@ header h1 {
 }
 
 #skills_container ul {
-	width:25%;
+	width:24%;
 	float:left;
+	border-left:1px solid rgb(255, 224, 0);
+	text-align: center;
+}
+
+#skills_container ul:first-child {
+	border:0px !important;
 }
 
 #skills_container li {
