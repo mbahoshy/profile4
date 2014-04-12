@@ -20,7 +20,7 @@ header {
 	float: left;
 	z-index: 10;
 	background-color: white;
-	box-shadow: 0px 2px 10px #D8ADFF;
+	box-shadow: 0px 2px 10px #E67B7B;
 }
 
 header a:visited {
@@ -46,7 +46,7 @@ header h1 {
 	width:100%;
 	height:200px;
 	float:left;
-	background-image: url('imgs/purplegirl2.jpg');
+	background-image: url('imgs/g_header2.png');
 	background-position:center; 
 }
 
@@ -125,7 +125,7 @@ header h1 {
 #page {
 	position:relative;
 	padding-top: 100px;
-	box-shadow: -3px 3px 3px #D8ADFF;
+	box-shadow: -3px 3px 3px #E67B7B;
 	overflow-x:hidden;
 }
 
@@ -166,7 +166,7 @@ header h1 {
 #skills_container {
 	width: 80%;
 	padding: 20px 10%;
-	/*background-color: #FFD2D2;*/
+	background-color: #FFF6D2;
 	float: left;
 	clear: both;
 	font-weight: bold;
@@ -174,9 +174,8 @@ header h1 {
 }
 
 #skills_container ul {
-	width:24%;
+	width:25%;
 	float:left;
-	border-left:1px solid rgb(255, 224, 0);
 	text-align: center;
 }
 
@@ -186,6 +185,11 @@ header h1 {
 
 #skills_container li {
 	padding:15px 0;
+}
+
+#skills_container li:nth-child(odd) {
+	border-bottom:1px solid rgb(255, 224, 0);
+
 }
 
 #skills_container label {
