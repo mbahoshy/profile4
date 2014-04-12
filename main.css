@@ -81,6 +81,10 @@ header h1 {
 	margin: 0;
 }
 
+.wrapper a:visited {
+	color: blue;
+}
+
 #about_me {
 	background-image: url('imgs/portfolio_header2.png');
 	background-position:center; 
@@ -222,9 +226,31 @@ header h1 {
 	float:left;
 }
 
-.half p {
-
+.text-container a {
+	margin-top: 15px;
+	margin-left:15px;
+	padding:10px 20px 10px 15px;
+	float:left;
+	clear:both;
+	border-radius: 0  15px 15px 0;
+	background-color: rgba(204, 204, 204, 0.3);
+	text-decoration: none;
 }
+
+.text-container a:hover {
+	background-color: rgba(0, 0, 255, 0.54);
+	color:white !important;
+}
+
+.text-container p {
+	width:100%;
+	float:left;
+	padding-left:15px !important;
+}
+
+/*.half p {
+
+}*/
 
 /*
 .topic-label {
@@ -236,7 +262,7 @@ header h1 {
 }
 */
 
-
+/*
 .short {
 	border-radius: 5px;
 	background-color: white;
@@ -254,7 +280,7 @@ header h1 {
 	box-shadow: none !important;
 	border-radius: 0 !important;
 }
-
+*/
 
 .third {
 	width:23.33%;
@@ -348,9 +374,16 @@ header h1 {
 	border-radius: 5px;
 }
 
+.img-container {
+	width: 80%;
+	margin: 0 10%;
+	float:left;
+}
+
 .project-img {
-	width:80%;
-	margin: 0 10% 40px 10%;
+	float:left;
+	width: 100%;
+	margin: 0 15px;
 	border:1px solid #CCCCCC;
 	border-radius: 20px;
 	box-shadow: 2px 2px 2px #CCCCCC;
