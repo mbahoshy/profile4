@@ -70,6 +70,7 @@ header h1 {
 	/*height:100px;*/
 	float: left;
 	font-size: 32;
+	box-shadow: -2px 2px 10px rgba(255, 255, 0, 0.63);
 	/*text-align: center;*/
 }
 
@@ -81,12 +82,29 @@ header h1 {
 }
 
 #about_me {
+	background-image: url('imgs/portfolio_header2.png');
+	background-position:center; 
+	color:white;
+	opacity: .75;
+	/*height:100px;*/
+}
+
+#portfolio {
 	background-image: url('imgs/about_me_ing.jpg');
 	background-position:center; 
 	color:white;
 	/*opacity: .75;*/
 	/*height:100px;*/
 }
+
+#resume {
+	background-image: url('imgs/resume_header.png');
+	background-position:center; 
+	color:white;
+	/*opacity: .75;*/
+	/*height:100px;*/
+}
+
 
 /* nav styling */
 
@@ -166,11 +184,11 @@ header h1 {
 #skills_container {
 	width: 80%;
 	padding: 20px 10%;
-	background-color: #FFF6D2;
+	background-color: rgba(255, 255, 0, 0.19);
 	float: left;
 	clear: both;
 	font-weight: bold;
-	margin: 40px 0;
+	margin: 40px 0 80px 0;
 }
 
 #skills_container ul {
@@ -188,7 +206,7 @@ header h1 {
 }
 
 #skills_container li:nth-child(odd) {
-	border-bottom:1px solid rgb(255, 224, 0);
+	/*border-bottom:1px solid rgb(255, 224, 0);*/
 
 }
 
@@ -200,7 +218,7 @@ header h1 {
 
 .text-container {
 	width:66%;
-	margin:20px 24% 20px 10%;
+	margin:20px 24% 140px 10%;
 	float:left;
 }
 
